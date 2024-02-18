@@ -10,8 +10,8 @@ Post.belongsTo(User);
 Post.hasMany(Comment);
 Comment.belongsTo(Post);
 
-User.belongsToMany(Like);
-Like.belongsToMany(User);
+User.belongsToMany(Like, { through: "UserLike" });
+Like.belongsToMany(User, { through: "UserLike" });
 
 module.exports = {
     Comment,
