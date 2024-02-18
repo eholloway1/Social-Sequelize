@@ -1,4 +1,4 @@
-const { db, DataTypes, Model } = requre("./db/connection.js");
+const { db, DataTypes, Model } = require("../db/connection");
 
 class Comment extends Model {};
 
